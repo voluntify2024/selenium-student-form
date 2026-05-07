@@ -1,0 +1,14 @@
+package drivers;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class DriverFactory {
+
+    public static WebDriver createDriver() {
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(5));
+        return driver;
+    }
+}
